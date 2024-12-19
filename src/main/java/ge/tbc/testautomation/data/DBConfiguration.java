@@ -8,21 +8,22 @@ public class DBConfiguration {
     private static final Properties properties = new Properties();
 
     static {
-        try (InputStream inputStream = DBConfiguration.class.getClassLoader().getResourceAsStream("database.properties")){
+        try (InputStream inputStream = DBConfiguration.class.getClassLoader().getResourceAsStream("database.properties")) {
             properties.load(inputStream);
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             throw new RuntimeException("Properties file could not be loaded.");
         }
     }
 
-    public static String getURL(){
+    public static String getURL() {
         return properties.getProperty("db.url");
     }
-    public static String getUsername(){
+
+    public static String getUsername() {
         return properties.getProperty("db.username");
     }
-    public static String getPassword(){
+
+    public static String getPassword() {
         return properties.getProperty("db.password");
     }
 }

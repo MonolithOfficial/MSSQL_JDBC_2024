@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 
 public class MSSQLConnection {
-    public static Connection connect(){
+    public static Connection connect() {
         try {
             DriverManager.registerDriver(new SQLServerDriver());
 

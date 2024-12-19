@@ -15,7 +15,7 @@ public class SauceDemoTest {
     DatabaseSteps databaseSteps;
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         databaseSteps = new DatabaseSteps();
     }
 
